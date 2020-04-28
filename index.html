@@ -1,20 +1,43 @@
-<!DOCTYPE html>
+<!DOCTYPE hmtl>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="style.css">
-    <title>Vitrohmeter</title>
-  </head>
-  <body>
-    <script src="script.js"></script>
-    <h1>Vitrohmeter</h1>
-    <script>
-      printColorToValue();
-      printValueToColor();
-      printResistance();
-      printResultField();
-    </script>
-    <div id="calculator"></div>
-    <br>
-  </body>
+	<head>
+		<meta charset="utf-8">
+		<title>Vitrometer v2</title>
+		<link rel="stylesheet" href="style/grid.css">
+		<link rel="stylesheet" href="style/style.css">
+		<script src="text/setUp.js"></script>
+		<script src="text/calc.js"></script>
+		<script src="text/extras.js"></script>
+	</head>
+	<body>
+		<div class="grid">
+			<div class="input"></div>
+			<div class="slider">
+				<div class='slider1'>
+					<div class='sliderLeft'>Farbe zu Wert</div>
+					<div class='sliderbar' onClick='switchCalcMode()'>
+						<div class='sliderpoint'></div>
+					</div>
+					<div class='sliderRight'>Wert zu Farbe</div>
+				</div>
+				<div class='slider2'>
+					<div class='sliderLeft'>4 Ringe</div>
+					<div class='sliderbar' onClick='switchRingMode()'>
+						<div  class='sliderpoint'></div>
+					</div>
+					<div class='sliderRight'>5 Ringe</div>
+				</div>
+			</div>
+			<div class="ringColors"></div>
+			<div class="resistance"></div>
+			<div class="output"></div>
+			<div class="colorTable"></div>
+		</div>
+		<script>
+			printColorSelections();
+			printResistance();
+			printColorTable();
+			printOutput();
+		</script>
+	</body>
 </html>
